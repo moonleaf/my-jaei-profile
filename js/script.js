@@ -30,11 +30,10 @@ fetch('data/profile.json')
     document.getElementById('profile-height').textContent = profile.height;
     document.getElementById('profile-specialty').textContent = profile.specialty;
     document.getElementById('profile-intro').textContent = `"${profile.intro}"`;
-    document.getElementById('contact-agency').textContent = profile.agency;
     document.getElementById('contact-email').textContent = profile.email;
     document.getElementById('contact-email').href = `mailto:${profile.email}`;
-    document.getElementById('contact-phone').textContent = profile.phone;
     document.getElementById('contact-instagram').textContent = profile.instagram;
+    document.getElementById('contact-instagram').href = `https://www.instagram.com/${profile.instagram.replace(/^@/, '')}/`;
 
     document.getElementById('career-list').innerHTML = profile.career.map(item => `
       <li class="flex items-center gap-4 bg-peach/30 rounded-2xl p-5">
