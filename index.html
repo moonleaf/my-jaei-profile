@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>재이 | 키즈 모델 프로필</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="js/tailwind-config.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Jua&family=Gaegu:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-white text-gray-700">
+
+<!-- 네비게이션 -->
+<header class="fixed top-0 inset-x-0 z-50 bg-white/80 backdrop-blur shadow-sm">
+  <div class="max-w-6xl mx-auto px-5 py-3 flex items-center justify-between">
+    <a href="#home" class="brand text-2xl text-pink-500">재이 ⭐</a>
+    <nav class="hidden md:flex gap-8 text-lg">
+      <a href="#profile" class="hover:text-pink-500">소개</a>
+      <a href="#career" class="hover:text-pink-500">경력</a>
+      <a href="#gallery" class="hover:text-pink-500">갤러리</a>
+      <a href="#daily" class="hover:text-pink-500">일상</a>
+      <a href="#contact" class="hover:text-pink-500">문의</a>
+    </nav>
+    <button id="menuBtn" class="md:hidden text-3xl text-pink-500">☰</button>
+  </div>
+  <nav id="mobileMenu" class="hidden md:hidden flex flex-col items-center gap-4 pb-5 text-lg bg-white/95">
+    <a href="#profile" class="hover:text-pink-500">소개</a>
+    <a href="#career" class="hover:text-pink-500">경력</a>
+    <a href="#gallery" class="hover:text-pink-500">갤러리</a>
+    <a href="#daily" class="hover:text-pink-500">일상</a>
+    <a href="#contact" class="hover:text-pink-500">문의</a>
+  </nav>
+</header>
+
+<!-- Hero -->
+<section id="home" class="pt-28 pb-16 px-5 bg-gradient-to-br from-bubble via-lemon to-mint">
+  <div class="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center gap-10">
+    <div class="flex-1 text-center md:text-left">
+      <p class="text-pink-600 text-xl mb-2">안녕하세요, 반가워요!</p>
+      <h1 id="hero-name" class="text-5xl md:text-6xl text-gray-800 mb-4">키즈 모델 재이 🌈</h1>
+      <p id="hero-catchphrase" class="text-xl mb-8">해맑은 웃음과 반짝이는 눈빛으로 매 순간을 빛나게 담아내요.</p>
+      <a href="#gallery" class="inline-block bg-pink-500 hover:bg-pink-600 text-white text-xl px-8 py-3 rounded-full shadow-lg transition">포트폴리오 보러가기</a>
+    </div>
+    <div class="flex-1">
+      <img src="images/hero.jpg"
+           alt="재이 프로필 대표 사진"
+           class="rounded-[3rem] shadow-2xl w-full max-w-md mx-auto object-cover aspect-[4/5] border-8 border-white">
+    </div>
+  </div>
+</section>
+
+<!-- 프로필 소개 -->
+<section id="profile" class="py-20 px-5 bg-white">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-4xl text-center text-pink-500 mb-12">재이는 이런 아이예요</h2>
+    <div class="flex flex-col md:flex-row gap-10 items-center">
+      <img src="images/profile.jpg"
+           alt="재이 프로필 사진"
+           class="rounded-3xl shadow-xl w-full max-w-sm object-cover aspect-square">
+      <div class="flex-1 grid grid-cols-2 gap-5 w-full">
+        <div class="bg-peach/40 rounded-2xl p-5 text-center">
+          <p class="text-lg text-pink-600">이름</p>
+          <p id="profile-name" class="text-2xl">하재이</p>
+        </div>
+        <div class="bg-mint/50 rounded-2xl p-5 text-center">
+          <p class="text-lg text-pink-600">나이</p>
+          <p id="profile-age" class="text-2xl">7세</p>
+        </div>
+        <div class="bg-lemon/60 rounded-2xl p-5 text-center">
+          <p class="text-lg text-pink-600">신장</p>
+          <p id="profile-height" class="text-2xl">122cm</p>
+        </div>
+        <div class="bg-bubble/50 rounded-2xl p-5 text-center">
+          <p class="text-lg text-pink-600">특기</p>
+          <p id="profile-specialty" class="text-2xl">발레, 피아노</p>
+        </div>
+        <div class="col-span-2 bg-gradient-to-r from-peach/40 to-mint/40 rounded-2xl p-5 text-center">
+          <p class="text-lg text-pink-600">한 줄 소개</p>
+          <p id="profile-intro" class="text-2xl">"카메라 앞에서 가장 나다운 웃음을 지어요 😊"</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 경력사항 -->
+<section id="career" class="py-20 px-5 bg-gradient-to-b from-mint/20 to-white">
+  <div class="max-w-3xl mx-auto">
+    <h2 class="text-4xl text-center text-pink-500 mb-12">경력사항</h2>
+    <ul id="career-list" class="space-y-4"></ul>
+  </div>
+</section>
+
+<!-- 갤러리 -->
+<section id="gallery" class="py-20 px-5 bg-gradient-to-b from-white to-mint/30">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-4xl text-center text-pink-500 mb-3">포트폴리오 갤러리</h2>
+    <p class="text-center text-lg mb-12">사진을 클릭하면 크게 볼 수 있어요</p>
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+      <img class="gallery-img rounded-2xl shadow-md object-cover aspect-square cursor-pointer hover:scale-105 transition" src="images/gallery/1.jpg" alt="갤러리 사진 1">
+      <img class="gallery-img rounded-2xl shadow-md object-cover aspect-square cursor-pointer hover:scale-105 transition" src="images/gallery/2.jpg" alt="갤러리 사진 2">
+      <img class="gallery-img rounded-2xl shadow-md object-cover aspect-square cursor-pointer hover:scale-105 transition" src="images/gallery/3.jpg" alt="갤러리 사진 3">
+      <img class="gallery-img rounded-2xl shadow-md object-cover aspect-square cursor-pointer hover:scale-105 transition" src="images/gallery/4.jpg" alt="갤러리 사진 4">
+      <img class="gallery-img rounded-2xl shadow-md object-cover aspect-square cursor-pointer hover:scale-105 transition" src="images/gallery/5.jpg" alt="갤러리 사진 5">
+      <img class="gallery-img rounded-2xl shadow-md object-cover aspect-square cursor-pointer hover:scale-105 transition" src="images/gallery/6.jpg" alt="갤러리 사진 6">
+    </div>
+  </div>
+</section>
+
+<!-- 일상사진 -->
+<section id="daily" class="py-20 px-5 bg-lemon/20">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-4xl text-center text-pink-500 mb-3">재이의 일상 📸</h2>
+    <p class="text-center text-lg mb-12">평범하지만 반짝이는 하루하루</p>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+      <img class="gallery-img rounded-xl shadow object-cover aspect-square cursor-pointer hover:scale-105 transition" src="images/daily/1.jpg" alt="일상 사진 1">
+      <img class="gallery-img rounded-xl shadow object-cover aspect-square cursor-pointer hover:scale-105 transition" src="images/daily/2.jpg" alt="일상 사진 2">
+      <img class="gallery-img rounded-xl shadow object-cover aspect-square cursor-pointer hover:scale-105 transition" src="images/daily/3.jpg" alt="일상 사진 3">
+      <img class="gallery-img rounded-xl shadow object-cover aspect-square cursor-pointer hover:scale-105 transition" src="images/daily/4.jpg" alt="일상 사진 4">
+      <img class="gallery-img rounded-xl shadow object-cover aspect-square cursor-pointer hover:scale-105 transition" src="images/daily/5.jpg" alt="일상 사진 5">
+      <img class="gallery-img rounded-xl shadow object-cover aspect-square cursor-pointer hover:scale-105 transition" src="images/daily/6.jpg" alt="일상 사진 6">
+      <img class="gallery-img rounded-xl shadow object-cover aspect-square cursor-pointer hover:scale-105 transition" src="images/daily/7.jpg" alt="일상 사진 7">
+      <img class="gallery-img rounded-xl shadow object-cover aspect-square cursor-pointer hover:scale-105 transition" src="images/daily/8.jpg" alt="일상 사진 8">
+    </div>
+  </div>
+</section>
+
+<!-- 문의 -->
+<section id="contact" class="py-20 px-5 bg-gradient-to-br from-bubble/40 via-white to-mint/40">
+  <div class="max-w-2xl mx-auto text-center">
+    <h2 class="text-4xl text-pink-500 mb-4">문의하기</h2>
+    <p class="text-lg mb-10">촬영 및 광고 제안은 아래 연락처로 편하게 문의해 주세요.</p>
+    <div class="bg-white rounded-3xl shadow-xl p-8 space-y-4 text-lg">
+      <p><span class="text-pink-500">소속사</span> <span id="contact-agency">리틀스타 키즈 에이전시</span></p>
+      <p><span class="text-pink-500">이메일</span> <a id="contact-email" href="mailto:contact@littlestar-kids.example" class="underline">contact@littlestar-kids.example</a></p>
+      <p><span class="text-pink-500">전화</span> <span id="contact-phone">02-1234-5678</span></p>
+      <p><span class="text-pink-500">인스타그램</span> <span id="contact-instagram">@jaei_littlestar</span></p>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-gray-800 text-gray-300 text-center py-6 text-sm">
+  <p>© 2026 재이 키즈 모델 프로필. All rights reserved.</p>
+  <p class="mt-1 text-gray-400">본 사이트의 사진은 예시용 Unsplash 이미지입니다.</p>
+</footer>
+
+<!-- 라이트박스 -->
+<div id="lightbox" class="hidden fixed inset-0 bg-black/80 z-50 items-center justify-center p-5 cursor-zoom-out">
+  <img id="lightboxImg" src="" alt="확대 이미지" class="max-h-[85vh] max-w-full rounded-2xl shadow-2xl">
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
